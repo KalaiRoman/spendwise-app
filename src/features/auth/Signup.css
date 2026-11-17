@@ -1,0 +1,16 @@
+/* Extra styles for Signup. Needs Login.css loaded as well. */
+
+.su-strength { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.su-bars { display: flex; gap: 4px; flex: 1; }
+.su-bars span { flex: 1; height: 5px; border-radius: 3px; background: var(--track); transition: background 0.2s; }
+.su-bars span.on.s1 { background: var(--err); }
+.su-bars span.on.s2 { background: #e0a02f; }
+.su-bars span.on.s3,
+.su-bars span.on.s4 { background: var(--left); }
+.su-strength small { color: var(--mute); min-width: 58px; text-align: right; }
+
+.su-terms { margin: 4px 0 22px; font-size: 14px; }
+.su-terms label { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; }
+.su-terms input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) { .su-bars span { transition: none; } }

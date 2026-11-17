@@ -1,0 +1,9 @@
+import React from 'react'
+import { getToken } from '../utils/Token'
+import { Navigate, Outlet } from 'react-router-dom';
+function ProtectedRouterWithoutToken() {
+    const token = getToken();
+    return !token ? <Outlet /> : <Navigate to="/dashboard" replace={true} />
+}
+
+export default ProtectedRouterWithoutToken
